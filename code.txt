@@ -1,0 +1,150 @@
+მზა ტემფლეითები https://getbootstrap.com/
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+ვიესკოდში scss ფაილის რომ შექმნა ეს აპია საჭრო გადმოსაწერი Live Sass Compiler
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+cmd ფაილები შექმნა:
+cd %USERPROFILE%\Desktop              :: გადადი სამუშაო მაგიდაზე
+mkdir MySite                          :: შექმენი საქაღალდე MySite
+cd MySite                             :: შედი MySite საქაღალდეში
+cd ..                                 :: გადადი უკან (Desktop-ზე)
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+ანგულარი https://nodejs.org/en/download ეს უნდა გადმოწერო რომ დაარეგისტრირო ანგულარი:
+ანგულარის დაინსტალირებისთვის საჭირო ერთხელ ტერმინალში ჩაწერო npm install -g @angular/cli და Visual Studio Code გჭირდება აპი Angular Extension Pack
+
+1. ng new პროექტის სახელი
+2. თუ ნოდ მოდულები წაშალე აღდგენა არის ამით npm i
+3. sass ინსტალაცია scss სთვის npm install -g sass
+4. ლაივ სერვერის ჩრთვა ng s -o
+5. კომპონენტის დამატება ng g c და კომპონენტის სახელი ან ng g c components/home
+6. ng g i interfaces/product ინტერფეისის პროდუქტი
+6. როცა პროეკტს მორჩები ng build --configuration production
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+git-ზე ატვირთვა https://git-scm.com/ ეს უნდა გადმოწერო გით cmd:
+gitbush ის აფდეითისთვის ტერმინალში ჩაწერე git update-git-for-windows
+
+გითზე ვისუალ კოდში რეგისტრაცია ეს ერთხელ უნდა გააკეთო
+git config --global user.name "შენი სახელი" 
+git config --global user.email "შენი ელ-ფოსტა"
+
+ატვირთვა გითზე
+1. git init
+2. git add .
+3. git branch -M main
+4. git remote add origin ლინკი საიტის სადაც ტვირთა
+5. git commit -m "რაც გინდა დაარქვი სახელი"
+6. git push -u origin main
+
+განახლების რამე კოდის შეცვლის დროს გითჰაბზე
+1. git add .
+2. git commit -m "რაც გინდა დაარქვი სახელი ოღონდ მეორე კომიტის"
+3. git push -u origin main
+
+გითჰაბში ისევ იმ რესპონსივში დაბრუნება თუ წაშალე ვსკოდში
+გახსენი ცარიელი VS Code.
+ზედა მენიუდან გახსენი ახალი ტერმინალი (Terminal ➡️ New Terminal).
+ტერმინალში ჯერ გადადი იმ ფოლდერში, სადაც საერთოდ გინდა რომ ეს პროექტი ჩავარდეს (მაგალითად, დესკტოპზე):
+Bash
+cd Desktop
+ახლა კი ჩაწერე მთავარი ბრძანება და ბოლოში ჩასვი წეღან დაკოპირებული ლინკი:
+Bash
+git clone https://github.com/nodomax/site.git
+როგორც კი Enter-ს დააჭერ, Git ინტერნეტიდან წამებში გადმოწერს შენს სუფთა კოდს დესკტოპზე შექმნილ ახალ ფოლდერში.
+
+ბრენჩის შექმნა
+git branch branch-name — ქმნის ბრენჩს.
+git checkout branch-name — გადადის ბრენჩზე.
+git checkout -b branch-name — ქმნის და გადადის ბრენჩზე ერთდროულად.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+display flex და grid კოდები:
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  gap: 16px;
+  row-gap: 16px;
+  column-gap: 16px;
+}
+.flex-item {
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+-----------------
+
+.grid-container {
+  display: grid;
+  grid-template-columns: none;
+  grid-template-rows: none;
+  grid-template-areas: none;
+  grid-template: none / none;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+  gap: 16px;
+  row-gap: 16px;
+  column-gap: 16px;
+  justify-items: stretch;
+  align-items: stretch;
+  place-items: stretch;
+  justify-content: start;
+  align-content: start;
+  place-content: start;
+}
+.grid-item {
+  grid-column-start: auto;
+  grid-column-end: auto;
+  grid-row-start: auto;
+  grid-row-end: auto;
+  grid-column: auto / auto;
+  grid-row: auto / auto;
+  grid-area: auto;
+  justify-self: stretch;
+  align-self: stretch;
+  place-self: stretch;
+  order: 0;
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+რესპონსიულის კოდი მაგ:
+
+/* Tablet */
+@media (max-width: 768px) {
+    .container {
+        width: 750px;
+        padding: 20px;
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+ფონტის დაყენება:
+
+@font-face {
+  font-family: geo;
+  src: url(app/font/geo.ttf);
+}
+
+body {
+  font-family: geo;
+}
+
