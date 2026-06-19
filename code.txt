@@ -36,8 +36,8 @@ git config --global user.email "შენი ელ-ფოსტა"
 
 ატვირთვა გითზე
 1. git init
-2. git add .
-3. git branch -M main
+2. git branch -M main
+3. git add .
 4. git remote add origin ლინკი საიტის სადაც ტვირთა
 5. git commit -m "რაც გინდა დაარქვი სახელი"
 6. git push -u origin main
